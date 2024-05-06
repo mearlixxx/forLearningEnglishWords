@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         //map with eng(value) and ru(key) words
         HashMap<String, String> words = new HashMap<>();
@@ -21,8 +21,16 @@ public class Main {
         File ruFile = new File("ru.txt");
 
         //adding ru/eng words to ru/eng lists
-        fullList(engList, engFile);
-        fullList(ruList, ruFile);
+        try {
+            fullList(engList, engFile);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            fullList(ruList, ruFile);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
         //adding eng/ru words to map
         for (int i = 0; i < 60; i++) {
