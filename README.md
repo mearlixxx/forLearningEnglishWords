@@ -1,2 +1,1 @@
-# EnglishWordsLearnHelper
-This program is made to learn foreign words. To file "home.txt" put the list of words on your language, to file "foreign.txt" put the translations of the words from the first time (the lines must be same).
+
