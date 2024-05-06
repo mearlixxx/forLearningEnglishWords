@@ -69,8 +69,10 @@ public class Main {
                 throw new RuntimeException(e);
             }
 
-            //"clearing" the console
-            for (int i = 0; i < 20; ++i) System.out.println();
+            // "clearing the console"
+            for (int i = 0; i < 20; i++) {
+                System.out.println();
+            }
         }
     }
 
